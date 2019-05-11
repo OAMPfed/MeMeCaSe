@@ -1,17 +1,16 @@
-function memeIt() {
-  var memeString = document.getElementById('memeInput').value;
-
+// Main memeIt function
+function memeIt(string) {
   let memeArray = [];
 
-  for (i = 0; i < memeString.length; i++) {
+  for (i = 0; i < string.length; i++) {
     if (i % 2 == 0.0) {
-      let a = memeString.charAt(i);
+      let a = string.charAt(i);
 
       let aUpper = a.toUpperCase(i);
 
       memeArray.push(aUpper);
     } else {
-      let b = memeString.charAt(i);
+      let b = string.charAt(i);
 
       let bLower = b.toLowerCase(i);
 
@@ -19,6 +18,5 @@ function memeIt() {
     }
   }
   memeRes = memeArray.join('');
-  console.log(memeRes);
-  document.getElementById('memeOutput').innerHTML = memeRes;
+  return memeRes
 }

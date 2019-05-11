@@ -1,4 +1,6 @@
 body {
+  background: #0E0B16;
+  color: whitesmoke;
   min-height: 100vh;
   margin: 0px;
   padding: 0px;
@@ -15,6 +17,8 @@ p {
   font-size: 25px;
 }
 #memeInput {
+  /* Increased font size so that mobile users wont automatically zoom on the input when clicking on the input */
+  font-size: 16px;
   width: 90%;
   max-width: 600px;
 }
