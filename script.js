@@ -1,22 +1,23 @@
 // Main memeIt function
 function memeIt(string) {
-  let memeArray = [];
 
-  for (i = 0; i < string.length; i++) {
-    if (i % 2 == 0.0) {
-      let a = string.charAt(i);
+  // Converts the whole string to array split it by every letter
+  let string_to_array = string.split('')
 
-      let aUpper = a.toUpperCase(i);
+  // Map every letter (takes 2 args, the currentValue and the index)
+  string_to_array.map((letter, index) => {
 
-      memeArray.push(aUpper);
-    } else {
-      let b = string.charAt(i);
+    // If the index is even
+    if(index % 2 == 0){
 
-      let bLower = b.toLowerCase(i);
+      // let string_to_array[index] equals to the current letter but uppercase
 
-      memeArray.push(bLower);
+      // string_to_array[index] is the same as calling string_to_array[0] and so on
+      
+      string_to_array[index] = letter.toUpperCase()
     }
-  }
-  memeRes = memeArray.join('');
-  return memeRes
+  })
+
+  // Returned the joined string
+  return string_to_array.join('')
 }
